@@ -12,6 +12,7 @@ long nCr(int n, int r);
 Do not modify the main function.*/
 
 #include <iostream>
+using namespace std;
 
 long Factorial(int no);
 long nCr(int n, int r);
@@ -26,4 +27,19 @@ int main() {
   std::cout << nCr(n,r);
   std::cout << std::endl;
   return 0;
+}
+long Factorial(int no){
+  int fac=1;
+  for (int r=no; r >= 1; r--) {
+      fac = fac * r;
+    }
+  return fac;
+}
+long nCr(int n, int r){
+  int x,y,nCr;
+  cout<<Factorial(n);
+  cout<<Factorial(r);
+
+  nCr=(n!)/ (r!)(n−r)!;
+  return nCr;
 }
